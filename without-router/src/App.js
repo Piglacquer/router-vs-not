@@ -14,6 +14,9 @@ class App extends Component {
 
   render () {
     const showAbout = () => {
+      // Weird to do in this situation
+      window.history.pushState({ title: 'about' }, 'hello', '/about')
+      //
       this.setState({
         showAbout: true,
         showStuff: false
@@ -21,6 +24,9 @@ class App extends Component {
     }
 
     const showStuff = () => {
+      // Weird to do in this situation
+      window.history.pushState({ title: 'stuff' }, 'hello', '/stuff')
+      //
       this.setState({
         showAbout: false,
         showStuff: true

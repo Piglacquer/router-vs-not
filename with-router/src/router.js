@@ -3,11 +3,12 @@ import { Router } from '@reach/router'
 import Stuff from './components/Stuff'
 import About from './components/About'
 
-const AppRouter = () => {
+const AppRouter = (props) => {
+  console.log(props)
   return (
     <Router>
-      <Stuff path='/stuff' />
-      <About path='/about' />
+      <Stuff path='stuff' />
+      <About path='about' />
     </Router>
   )
 }
